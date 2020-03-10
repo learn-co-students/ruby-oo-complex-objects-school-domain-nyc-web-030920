@@ -3,7 +3,6 @@ def School
     attr_accessor :name, :roster 
 
     def initialize(name)
-        @name = name 
         @roster = {}
     end 
     def add_student(name, grade) 
@@ -14,7 +13,7 @@ def School
     end 
     def sort 
         sorted = {}
-        roster.each do |grade, students| 
+        @roster.each do |grade, students| 
             sorted[grade] = students.sort 
         end 
         sorted 
