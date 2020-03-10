@@ -13,8 +13,8 @@ def School
     end 
     def sort 
         sorted = {}
-        @roster.each do |grade, students| 
-            sorted[grade] = students.sort 
+        @roster.map do |k, v| 
+            sorted[k] = v.sort 
         end 
         sorted 
     end 
