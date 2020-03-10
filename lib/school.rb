@@ -16,8 +16,6 @@ def School
         roster[grade]
     end 
     def sort 
-        @roster.each do |k, arr| 
-            roster[k] = arr.sort 
-        end 
+        @roster.each {|k, arr| roster[k] = arr.sort}
     end 
 end 
