@@ -10,6 +10,6 @@ def School
         if !roster[grade]
             roster[grade] = []
         end 
-        roster[grade] << name 
+        roster[grade].append(name) 
     end 
 end 
