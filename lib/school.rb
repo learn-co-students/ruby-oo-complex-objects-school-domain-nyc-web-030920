@@ -12,4 +12,12 @@ def School
         end 
         roster[grade] << name 
     end 
+    def grade(grade)
+        roster[grade]
+    end 
+    def sort 
+        @roster.each do |k, arr| 
+            roster[k] = arr.sort 
+        end 
+    end 
 end 
