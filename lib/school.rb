@@ -7,8 +7,11 @@ def School
         @roster = []
     end 
     def add_student(name, grade) 
-        if !roster[grade]
-            roster[grade] = []
+        if roster[grade]
+            roster[grade] << name 
+        else
+            roster[grade] = [] 
+            roster[grade] << name 
         end 
         roster[grade] << name 
     end 
@@ -16,6 +19,8 @@ def School
         roster[grade]
     end 
     def sort 
-        @roster.each {|k, arr| roster[k] = arr.sort}
+        @roster.each do |k, v| 
+            v.sort 
+        end 
     end 
 end 
